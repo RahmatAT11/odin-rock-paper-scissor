@@ -84,4 +84,8 @@ function playGame() {
 
         playRound(humanSelection, computerSelection);
     }
+
+    console.log("Final Score:");
+    console.log("Human:", humanScore);
+    console.log("Computer:", computerScore);
 }
