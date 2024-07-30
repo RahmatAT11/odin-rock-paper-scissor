@@ -30,3 +30,6 @@ function getHumanChoice() {
     
     throw new Error("Wrong choice, please input the right choice!");
 }
+
+let humanScore = 0;
+let computerScore = 0;
