@@ -1,4 +1,5 @@
-console.log("Hello, World!");
+let humanScore = 0;
+let computerScore = 0;
 
 // this function will generate rock/paper/scissors values
 function getComputerChoice() {
@@ -30,6 +31,3 @@ function getHumanChoice() {
     
     throw new Error("Wrong choice, please input the right choice!");
 }
-
-let humanScore = 0;
-let computerScore = 0;
