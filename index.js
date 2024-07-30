@@ -31,3 +31,43 @@ function getHumanChoice() {
     
     throw new Error("Wrong choice, please input the right choice!");
 }
+
+// this function will play the game by comparing the user choice
+// and the computer choice
+function playRound(humanChoice, computerChoice) {
+    try {
+        if (humanChoice === "rock") {
+            if (computerChoice === "rock") {
+                console.log("It's a draw");
+            } else if (computerChoice === "paper") {
+                computerScore++;
+                console.log("You lose! Paper beats Rock");
+            } else {
+                humanScore++;
+                console.log("You win! Rock beats Scissors")
+            }
+        } else if (humanChoice === "paper") {
+            if (computerChoice === "paper") {
+                console.log("It's a draw");
+            } else if (computerChoice === "scissors") {
+                computerScore++;
+                console.log("You lose! Scissors beats Paper");
+            } else {
+                humanScore++;
+                console.log("You win! Paper beats Rock")
+            }
+        } else {
+            if (computerChoice === "scissors") {
+                console.log("It's a draw");
+            } else if (computerChoice === "rock") {
+                computerScore++;
+                console.log("You lose! Rock beats Scissors");
+            } else {
+                humanScore++;
+                console.log("You win! Scissors beats Paper")
+            }
+        }
+    } catch (error) {
+        console.log("Wrong input! please input paper/rock/scissors");
+    }
+}
