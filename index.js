@@ -78,14 +78,14 @@ function playGame() {
 
     let humanSelection, computerSelection;
     
-    for (let index = 0; index < 5; index++) {
-        humanSelection = getHumanChoice();
-        computerSelection = getComputerChoice();
+    // for (let index = 0; index < 5; index++) {
+    //     humanSelection = getHumanChoice();
+    //     computerSelection = getComputerChoice();
 
-        playRound(humanSelection, computerSelection);
-    }
+    //     playRound(humanSelection, computerSelection);
+    // }
 
-    console.log("Final Score:");
-    console.log("Human:", humanScore);
-    console.log("Computer:", computerScore);
+    // console.log("Final Score:");
+    // console.log("Human:", humanScore);
+    // console.log("Computer:", computerScore);
 }
