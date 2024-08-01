@@ -78,9 +78,16 @@ function playGame() {
 
     let humanSelection, computerSelection;
     
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            humanSelection = e.target.id;
+            computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+        })
+    })
+    
     // for (let index = 0; index < 5; index++) {
-    //     humanSelection = getHumanChoice();
-    //     computerSelection = getComputerChoice();
 
     //     playRound(humanSelection, computerSelection);
     // }
