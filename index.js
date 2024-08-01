@@ -79,6 +79,7 @@ function playGame() {
     const displayResult = document.querySelector("#display-result");
     const displayPlayerScore = document.querySelector("#player");
     const displayComputerScore = document.querySelector("#computer");
+    const displayWinnerResult = document.querySelector("#winner-result");
 
     let humanScore = 0;
     let computerScore = 0;
@@ -93,17 +94,17 @@ function playGame() {
         button.addEventListener("click", (e) => {
             humanSelection = e.target.id;
             computerSelection = getComputerChoice();
+
             playRound(humanSelection, computerSelection);
+
+            if (humanScore === 5) {
+                displayWinnerResult.textContent = "Player Win!";
+            } else if (computerScore === 5) {
+                displayWinnerResult.textContent = "Computer Win!";
+            }
         })
     })
     
-    if (humanScore !== 0 || computerScore !== 0) {
-        if (humanScore === 5) {
-            console.log("You win!");
-        } else {
-            console.log("You lose!");
-        }
-    }
 }
 
 playGame();
